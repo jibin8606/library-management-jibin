@@ -1,0 +1,36 @@
+:root { --bg:#f6f7f9; --fg:#1d2330; --muted:#6b7385; --line:#e2e5ec; --card:#fff; --primary:#2f5bea; --ok:#1c8a4b; --bad:#c62d3b; --warn:#b7791f; }
+* { box-sizing: border-box; }
+body { margin:0; font: 15px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--fg); }
+h1 { font-size:1.5rem; margin:.2rem 0 1rem; } h2 { font-size:1.1rem; margin:1.6rem 0 .6rem; } h3 { margin:.2rem 0 .6rem; }
+.container { max-width:1100px; margin:0 auto; padding:1.2rem; }
+.topbar { display:flex; align-items:center; gap:1rem; padding:.6rem 1.2rem; background:var(--card); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.topbar nav { display:flex; gap:.3rem; } .topbar nav a { padding:.35rem .7rem; border-radius:6px; color:var(--fg); text-decoration:none; }
+.topbar nav a.active { background:#e8edff; color:var(--primary); font-weight:600; }
+.spacer { flex:1; } .muted { color:var(--muted); } .small { font-size:.8rem; } .mono { font-family:ui-monospace,Menlo,monospace; font-size:.85rem; }
+button, select, input, textarea { font:inherit; }
+button { padding:.4rem .8rem; border:1px solid var(--line); background:var(--card); border-radius:6px; cursor:pointer; }
+button:hover:not(:disabled) { border-color:#b9c0d0; } button:disabled { opacity:.5; cursor:not-allowed; }
+button.primary { background:var(--primary); border-color:var(--primary); color:#fff; }
+button.danger { color:var(--bad); } button.link { border:0; background:none; color:var(--primary); text-decoration:underline; padding:0 .3rem; }
+input, select, textarea { padding:.45rem .6rem; border:1px solid var(--line); border-radius:6px; background:#fff; width:100%; }
+td select { width:auto; } .row select, .row input { width:auto; flex:1; }
+label { display:block; font-size:.85rem; color:var(--muted); margin-bottom:.7rem; } label input, label textarea { margin-top:.25rem; color:var(--fg); }
+.search { margin-bottom:1rem; }
+table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+th, td { text-align:left; padding:.55rem .75rem; border-bottom:1px solid var(--line); vertical-align:top; } th { font-size:.78rem; text-transform:uppercase; color:var(--muted); background:#fafbfc; }
+tr.row-bad td { background:#fff5f5; } td.actions { white-space:nowrap; display:flex; gap:.4rem; align-items:center; }
+.badge { display:inline-block; padding:.12rem .5rem; border-radius:999px; font-size:.78rem; font-weight:600; }
+.badge.ok { background:#e3f6ea; color:var(--ok); } .badge.bad { background:#fde8ea; color:var(--bad); } .badge.warn { background:#fdf1dc; color:var(--warn); } .badge.muted { background:#eceef3; color:var(--muted); }
+.bad-text { color:var(--bad); }
+.alert { padding:.6rem .9rem; border-radius:8px; margin:.6rem 0; border:1px solid; } .alert ul { margin:.3rem 0 0 1.1rem; padding:0; }
+.alert.error { background:#fde8ea; border-color:#f5b9bf; color:#8f1d29; } .alert.success { background:#e3f6ea; border-color:#a8dcbc; color:#14653a; }
+.pager { display:flex; gap:1rem; align-items:center; justify-content:center; margin:1rem 0; }
+.tabs { display:flex; gap:.4rem; margin:.4rem 0 1rem; } .tabs button { text-transform:capitalize; } .tabs button.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.cards { display:flex; gap:1rem; margin-bottom:1rem; flex-wrap:wrap; } .card { flex:1; min-width:150px; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:.8rem 1rem; }
+.card span { display:block; color:var(--muted); font-size:.8rem; } .card strong { font-size:1.4rem; }
+.panel { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:1rem; margin-bottom:1rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0 1rem; }
+.row { display:flex; gap:.6rem; align-items:center; margin-top:.6rem; } .row.between { justify-content:space-between; margin-top:0; }
+.auth-card { max-width:380px; margin:8vh auto; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.5rem; }
+.auth-card button.primary { width:100%; margin-top:.3rem; padding:.55rem; }
+.dim { opacity:.6; transition:opacity .15s; }
